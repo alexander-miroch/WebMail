@@ -1,0 +1,66 @@
+<td valign="top">
+<h1> Добавление/редактирование фильтра </h1>
+<center>
+<table width="400" cellpadding="2" cellspacing="2" border="0">
+<form action="@<<action>>@" method="post" name="filter">
+
+<tr><td colspan="4">
+	<input type="radio" name="andor" value="1" @<<f_andora>>@>И
+	<input type="radio" name="andor" value="2" @<<f_adnoro>>@>Или
+</td></tr>
+
+<!-- -->
+@<<f_div>>@
+<!-- -->
+
+
+<!-- -->
+<!-- -->
+
+
+<!-- -->
+<!-- -->
+
+<tr><td align="center" class="cmes">
+Сделать
+</td><td>
+<select name="what_todo" onchange="javascript:f_hide(this)">
+<option value="0" @<<f_do0>>@>-</option>
+<option value="1" @<<f_do1>>@>Переместить</option>
+<option value="2" @<<f_do2>>@>Копировать</option>
+<option value="3" @<<f_do3>>@>Удалить</option>
+</select>
+</td>
+<td align="left" class="cmes">
+в папку</td><td>
+<select name="what_todo_folder">
+<option value="0" checked>-</option>
+@<<copyfolder>>@
+</select>
+</td></tr>
+<tr><td colspan="2" class="cmes">
+Переслать письмо по адресу:
+</td><td colspan="2">
+<input type="text" size="32" name="fresend" value="@<<f_data>>@" />
+</td></tr>
+
+<tr><td colspan="2" class="cmes">
+Пометить письмо "Важным"
+</td><td colspan="2">
+<input type="checkbox" name="fprio" value="1" @<<f_prio>>@ />
+</td></tr>
+
+<tr><td colspan="2" class="cmes">
+Порядок фильтра
+</td><td colspan="2">
+<input type="text" name="forder" size="2" maxlength="2" value="@<<f_order>>@" />
+</td></tr>
+
+
+<tr><td colspan="4" align="center">
+<input type="submit" class="button" value="Сохранить">
+<input type="button" class="button" value="Отмена" onclick='window.location = "/wm.fcgi?cf=15"'>
+</td></tr>
+</table>
+</form>
+</td>

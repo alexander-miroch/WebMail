@@ -1,0 +1,39 @@
+<td valign="top">
+<h1> Настройки </h1>
+<center>
+<table width="400" cellpadding="2" cellspacing="2" border="0">
+<form action="@<<action>>@" method="post" name="prefs">
+<input type="hidden" name="pr_act" value="1">
+<tr><td width="200" class="cmes" align="right">
+Имя </td><td align="left"><input type="text" name="pr_name" value="@<<cpr_name>>@" size="24"></td></tr>
+
+<tr><td width="200" class="cmes" align="right">
+Сообщений на странице</td><td align="left"><input type="text" name="pr_pp" value="@<<cpr_pp>>@" size="24"></td></tr>
+<tr><td width="200" class="cmes" align="right">
+Открывать сообщение отдельно</td><td align="left"><input type="checkbox" name="pr_otd" @<<cpr_otd>>@></td></tr>
+<tr><td width="200" class="cmes" align="right">
+Упорядочить по</td><td align="left">
+<select name="pr_sby" >
+<option value="d" @<<cpr_d>>@>Дата</option>
+<option value="f" @<<cpr_f>>@>Отправитель</option>
+<option value="s" @<<cpr_s>>@>Тема</option>
+<option value="z" @<<cpr_z>>@>Размер</option>
+</select>
+</td></tr>
+<tr><td width="200" class="cmes" align="right">
+По убыванию</td><td align="left">
+<input type="checkbox" name="pr_sbyo" @<<cpr_sbyo>>@ value="d">
+</td></tr>
+<tr><td width="200" class="cmes" align="right" valign="top">Подпись</td>
+<td><textarea name="pr_sign" rows="4" cols="24">@<<cpr_sign>>@</textarea></td></tr>
+<tr><td colspan="2" align="center">
+<input type="submit" class="button" value="Сохранить">
+</td></tr>
+</table>
+
+
+</form>
+
+</td></tr>
+</table>
+</td>

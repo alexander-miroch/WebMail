@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<script language="javascript" src="script.js"></script>
+<link href="/wm.css" rel="stylesheet" type="text/css">
+<link href="/images/favicon.ico" rel="SHORTCUT ICON" />
+<title>Создание сообщения</title>
+</head>
+<body style="background: #f1f2ee">
+<table width="100%" cellpadding="2" cellspacing="2" border="0">
+<tr><td align="center">
+<h1>Создание сообщения</h1>
+<form name="compose" action="@<<action>>@" method="post" onssubmit="window.close()">
+
+<table width="400px" cellpadding="2" cellspacing="2" border="0">
+ <tr><td align="left" class="cmes">Кому </td><td class="ab_s"><input type="text" name="c_to" value="@<<r_to>>@" size="32"></td></tr>
+ <tr><td align="left" class="cmes">Копии</td><td class="ab_s"><input type="text" name="c_copy" size="32" value="@<<r_cc>>@"> <em>&nbsp;&nbsp;указываются через запятую</em></td></tr>
+ <tr><td align="left" class="cmes">Тема</td><td class="ab_s"><input type="text" name="c_subj" value="@<<r_subj>>@" size="32"></td>
+ <tr><td align="left" class="cmes" colspan="2">
+   <a href="#" onclick="window.open('@<<adr_book>>@','Адреса','width=460,height=300,location=0')"><img src="/images/turba.png" />&nbsp;Адресная книга</a>
+ </td></tr>
+ <tr><td align="left" class="cmes">Важность</td>
+ <td class="ab_s">
+  <select name="c_prio">
+	<option value="5">Низкая</option>
+	<option value="3" selected>Обычная</option>
+	<option value="1">Высокая</option>
+  </select>
+ </td>
+ <tr><td class="cmes" colspan="2">Сообщение</td></tr>
+ <tr><td colspan="2" align="center"><textarea name="c_body" rows="16" cols="60">@<<r_msg_body>>@</textarea></td></tr>
+<input type="hidden" name="todo" value="6">
+<input type="hidden" name="r_msg" value="@<<r_mesg>>@">
+<input type="hidden" name="f_msg" value="@<<f_mesg>>@">
+<tr><td colspan="2" align="center">
+<input type="submit" value="Отослать" class="button">
+<input type="button" value="В черновик" class="button" onclick="go_cmsg_ahead(10)">
+<input type="button" value="Отмена" onclick="window.close()" class="button"></td></tr>
+</form>
+
+
+<tr><td align="left" colspan="2" class="cmes">
+ <p id="pbar"><img src="/images/loading.gif" />Загрузка...</p>
+</td></tr>
+<form name="c_attach" action=@<<action>>@ method=post enctype="multipart/form-data" target="ifr_target" onsubmit="f_sub(this)">
+
+<tr><td align="left" class="cmes">
+Файл </td><td><input type="file" name="file" size="32">
+
+ <input type="submit" value="Закачать" class="button">
+</td></tr>
+
+<tr><td align="left" colspan="2" class="cmes">
+ <div id="dv">@<<uploaded>>@</div>
+ </form>
+ <br>
+
+
+ <iframe name="ifr_target" src="about:blank" id="u_if" onload="frame_go(this)"></iframe>
+
+
+ <script language="javascript">
+	var frame = document.getElementById("u_if")
+ </script>
+
+</td></tr></table>
+
+
+
+</td></tr>
+</table>
+</body>
+</html>

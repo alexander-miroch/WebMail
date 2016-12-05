@@ -1,0 +1,72 @@
+<td valign="top">
+
+<form name="msg" action="@<<action>>@" method="post">
+
+ <table width="100%" cellpadding="0" cellspacing="0" border="0" class="tm">
+@<<com1>>@
+
+ <tr><td colspan="9" align="center" style="font-size: 6px">
+        <img src="/images/trash.png">&nbsp;<a onclick="javascript:return c_drop()" href="@<<folder_drop>>@">Удалить папку</a>&nbsp;
+        <img src="/images/ingo.png">&nbsp;<a onclick="javascript:return c_empty()" href="@<<folder_empty>>@" >Очистить папку</a>&nbsp;
+        <img src="/images/trash.png">&nbsp;<a href="@<<mbox_delete>>@" onclick="goahead(1)">Удалить сообщения</a>&nbsp;
+        <img src="/images/copy.png">&nbsp;<a href=# onclick="goahead(2)">Копировать</a>&nbsp;
+        <img src="/images/copy.png">&nbsp;<a href=# onclick="goahead(5)">Переместить</a>&nbsp;
+        <select name="copyto">
+        <option value="0">-</option>
+        @<<copyfolder>>@
+        </select><br />&nbsp;
+  </td></tr>
+
+
+
+<tr><td>
+
+ <table width="100%" border="0" cellpadding="0" cellspacing="0" class="msgs"><tr>
+ <th width="9%" height="28" class="ff">
+ <input type="checkbox" onclick="select_all('msg')"></th>
+ <input type="hidden" name="todo" value="0">
+ <th class="s" width="20%">@<<url0>>@</th>
+ <th class="s" width="52%">@<<url1>>@</th>
+ <th class="s" width="11%">@<<url2>>@</th>
+ <th class="fl" width="6%">@<<url3>>@</th></tr>
+
+ @<<messages>>@
+
+
+ <tr><td colspan="9" align="center" class="sp">
+ @<<sumpagess>>@
+ <br />
+ </td></tr></table>
+@<<com2>>@
+
+ <tr><td class="caption" colspan="10" width="100%">
+  &nbsp;<img src="/images/mail_answered.png">&nbsp;
+  <a href=# onclick='window.open("@<<mbox_reply>>@")'>Ответить</a>
+  &nbsp;<img src="/images/mail_answered.png">&nbsp;
+  <a href=# onclick='window.open("@<<mbox_all>>@")'>Ответить всем</a>
+  &nbsp;<img src="/images/mail_answered.png">&nbsp;
+  <a href=# onclick='window.open("@<<mbox_resend>>@")'>Переслать</a>
+  &nbsp;<img src="/images/inbox.png">&nbsp;
+  <a href="#" onclick="window.open('@<<mbox_print>>@','source','toolbar=0,location=0,scrollbars=1')">Исходник</a>
+  &nbsp;<img src="/images/print.png">&nbsp;
+  <a href="#" onclick="window.open('@<<mbox_printer>>@','source','toolbar=0,location=0,scrollbars=1')">Печать</a>
+  @<<continue>>@
+ </td></tr>
+ <tr><td class="premes" colspan="10" width="100%">
+ @<<pre_mess>>@
+ </td></tr>
+
+ <tr><td class="mess"  colspan="10" width="100%">
+  <table width="100%" cellpadding="10" cellspacing="10" border="0"><tr><td>
+  <!-- MESSAGE HERE -->
+
+  @<<message>>@
+
+  <!-- /MESSAGE HERE -->
+  </td><tr></table>
+ </td></tr>
+
+ </table>
+<!--</td></tr></table>-->
+</form>
+</td><td width="20">&nbsp;&nbsp;</td>

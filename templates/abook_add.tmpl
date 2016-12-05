@@ -1,0 +1,44 @@
+<td valign="top">
+<h1> Добавление/редактирование записи </h1>
+<center>
+<table width="400" cellpadding="2" cellspacing="2" border="0">
+<form action="@<<action>>@" method="post" name="abook">
+<tr><td width="200" class="cmes" align="right">
+Имя </td><td align="left"><input type="text" name="ab_name" value="@<<cab_name>>@" size="24"></td></tr>
+<tr>
+<td width="200" class="cmes" align="right">
+Email </td><td align="left"><input type="text" name="ab_email" value="@<<cab_email>>@" size="24"></td></tr>
+
+<tr><td width="200" class="cmes" align="right" valign="top">Ник</td>
+<td align="left"><input type="text" name="ab_nick" value="@<<cab_nick>>@" size="24"></td></tr>
+
+<tr><td width="200" class="cmes" align="right" valign="top">Домашний телефон</td>
+<td align="left"><input type="text" name="ab_dtel" value="@<<cab_dtl>>@" size="24"></td></tr>
+
+<tr><td width="200" class="cmes" align="right" valign="top">Рабочий телефон</td>
+<td align="left"><input type="text" name="ab_rtel" value="@<<cab_rtl>>@" size="24"></td></tr>
+
+<tr><td width="200" class="cmes" align="right" valign="top">Мобильный телефон</td>
+<td align="left"><input type="text" name="ab_mtel" value="@<<cab_mtl>>@" size="24"></td></tr>
+
+
+
+<tr><td width="200" class="cmes" align="right" valign="top">Рабочий адрес</td>
+<td><textarea name="ab_raddr" rows="4" cols="24">@<<cab_radr>>@</textarea></td></tr>
+
+<tr><td width="200" class="cmes" align="right" valign="top">Домашниий адрес</td>
+<td><textarea name="ab_daddr" rows="4" cols="24">@<<cab_dadr>>@</textarea></td></tr>
+
+<tr><td width="200" class="cmes" align="right" valign="top">Комментарий</td>
+<td><textarea name="ab_comm" rows="4" cols="24">@<<cab_comm>>@</textarea></td></tr>
+
+<tr><td colspan="2" align="center">
+<input type="hidden" name="edit_what" value="@<<ab_edit>>@">
+<input type="submit" class="button" value="Сохранить">
+</td></tr>
+</table>
+
+
+</form>
+
+</td>

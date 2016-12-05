@@ -1,0 +1,10 @@
+
+Fast webmail written in C.
+
+Works with Maildir.
+
+1. You will want to install libgdbm and libfcgi devel packages to compile this.
+2. Install apache mod_fcgid (add Options +ExecCGI to your config)
+3. Set the ROOT macro in wmail.h
+4. Set Maildir specific macros in fs_drv.c (passwd file, uid, gid)
+5. Compile and install the program

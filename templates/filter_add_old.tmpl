@@ -1,0 +1,121 @@
+<td valign="top">
+<h1> Добавление/редактирование фильтра </h1>
+<center>
+<table width="400" cellpadding="2" cellspacing="2" border="0">
+<form action="@<<action>>@" method="post" name="filter">
+
+<tr><td colspan="4">
+	<input type="radio" name="andor" value="1" checked>И
+	<input type="radio" name="andor" value="2">Или
+</td></tr>
+
+<!-- -->
+<tr><td width="200" class="cmes" align="right">
+Поле
+</td><td>
+<select name="field0">
+<option value="0" selected>-</option>
+<option value="From">От</option>
+<option value="To">Кому</option>
+<option value="Cc">Cc</option>
+<option value="Bcc">Bcc</option>
+</select>
+</td>
+</td>
+<td class="cmes">
+<select name="yno0">
+<option value="yes" selected>Содержит</option>
+<option value="no">Не содержит</option>
+</select>
+</td>
+<td align="left"><input type="select" name="fact0" value="" size="32"></td></tr>
+<!-- -->
+
+
+<!-- -->
+<tr><td width="200" class="cmes" align="right">
+Поле
+</td><td>
+<select name="field1">
+<option value="0" checked>-</option>
+<option value="From">От</option>
+<option value="To">Кому</option>
+<option value="Cc">Cc</option>
+<option value="Bcc">Bcc</option>
+</select>
+</td>
+</td>
+<td class="cmes">
+<select name="yno1">
+<option value="yes" selected>Содержит</option>
+<option value="no">Не содержит</option>
+</select>
+</td>
+<td align="left"><input type="select" name="fact1" value="" size="32"></td></tr>
+<!-- -->
+
+
+<!-- -->
+<tr><td width="200" class="cmes" align="right">
+Поле
+</td><td>
+<select name="field2">
+<option value="0" checked>-</option>
+<option value="From">От</option>
+<option value="To">Кому</option>
+<option value="Cc">Cc</option>
+<option value="Bcc">Bcc</option>
+</select>
+</td>
+</td>
+<td class="cmes">
+<select name="yno2">
+<option value="yes" selected>Содержит</option>
+<option value="no">Не содержит</option>
+</select>
+</td>
+<td align="left"><input type="select" name="fact2" value="" size="32"></td></tr>
+<!-- -->
+
+<tr><td align="center" class="cmes">
+Сделать
+</td><td>
+<select name="what_todo">
+<option value="0" checked>-</option>
+<option value="1" checked>Переместить</option>
+<option value="2">Копировать</option>
+<option value="3">Удалить</option>
+</select>
+</td>
+<td align="left" class="cmes">
+в папку</td><td>
+<select name="what_todo_folder">
+<option value="0" checked>-</option>
+@<<copyfolder>>@
+</select>
+</td></tr>
+<tr><td colspan="2" class="cmes">
+Переслать письмо по адресу:
+</td><td colspan="2">
+<input type="text" size="32" name="fresend" value="@<<f_data>>@" />
+</td></tr>
+
+<tr><td colspan="2" class="cmes">
+Пометить письмо "Важным"
+</td><td colspan="2">
+<input type="checkbox" name="fprio" value="1" @<<f_prio>>@ />
+</td></tr>
+
+<tr><td colspan="2" class="cmes">
+Порядок фильтра
+</td><td colspan="2">
+<input type="text" name="forder" size="2" maxlength="2" value="@<<f_order>>@" />
+</td></tr>
+
+
+<tr><td colspan="4" align="center">
+<input type="submit" class="button" value="Сохранить">
+</td></tr>
+</table>
+</form>
+</td>

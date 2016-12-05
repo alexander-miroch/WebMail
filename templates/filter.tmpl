@@ -1,0 +1,31 @@
+<td align="center" valign="top">
+<table width="100%" cellpadding="2" cellspacing="4" border="0">
+<tr valign="top"><td align="center" valign="top">
+<h1>Фильтры</h1>
+<img src="/images/new.png">&nbsp;<a href="@<<filter_add>>@">Добавить</a>&nbsp;
+<img src="/images/delete.png">&nbsp;<a href="#" onclick="go_fi_ahead(12)">Удалить</a>&nbsp;
+<img src="/images/reload.png">&nbsp;<a href="#" onclick="go_fi_ahead(13)">Вкл/Выкл</a>&nbsp;
+<img src="/images/whitelist.png">&nbsp;<a href="#" onclick="go_fi_ahead(14)">Применить</a>&nbsp;
+</form>
+</td></tr>
+<tr><td>
+ <form name="filter_f" method="post" action="@<<action>>@">
+ <input type="hidden" name="todo">
+ <table width="100%" border="0" cellpadding="0" cellspacing="0" class="msgs">
+ <th class="ff" height="28">
+ <input type="checkbox" onclick="javascript:select_all('filter_f')"></th>
+
+ <th class="s">№</th>
+ <th class="s">Фильтр</th>
+ <th class="fl">Действие</th>
+
+  @<<filter_list>>@
+
+
+
+
+ </table>
+ </form>
+</td></tr>
+</table>
+</td>

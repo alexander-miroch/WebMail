@@ -1,0 +1,51 @@
+<td valign="top">
+<form name="msg" action="@<<action>>@" method="post">
+ <table width="100%" cellpadding="2" cellspacing="10" border="0">
+
+ <tr><td colspan="9" align="center">
+        <img src="/images/trash.png">&nbsp;<a onclick="javascript:return c_drop()" href="@<<folder_drop>>@">Удалить папку</a>&nbsp;
+        <img src="/images/ingo.png">&nbsp;<a onclick="javascript:return c_empty()" href="@<<folder_empty>>@" >Очистить папку</a>&nbsp;
+	<img src="/images/trash.png">&nbsp;<a href="@<<mbox_delete>>@" onclick="goahead(1)">Удалить сообщения</a>&nbsp;<br />
+        <img src="/images/copy.png">&nbsp;<a href=# onclick="goahead(2)">Копировать</a>&nbsp;
+        <img src="/images/copy.png">&nbsp;<a href=# onclick="goahead(5)">Переместить</a>&nbsp;
+        <select name="copyto">
+        <option value="0">-</option>
+        @<<copyfolder>>@
+        </select>&nbsp;
+        <img src="/images/mnemo.png">&nbsp;<a href=# onclick="goahead(11)">Пометить</a>&nbsp;
+        <select name="markas">
+        <option value="0">-</option>
+	<option value="1">Прочтенными</option>
+	<option value="2">Непрочтенными</option>
+	<option value="3">Важными</option>
+	<option value="4">Неважными</option>
+        </select>
+  </td></tr>
+
+
+
+
+ <tr><td>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="msgs"><tr>
+  <th height="28" width="9%" class="ff">
+  <input type="checkbox" onclick="select_all('msg')">
+  <input type="hidden" name="todo" value="0"></th>
+  <th class="s" width="20%">@<<url0>>@</th>
+  <th class="s" width="52%">@<<url1>>@</th>
+  <th class="s" width="11%">@<<url2>>@</th>
+  <th width="6%" class="fl">@<<url3>>@</th>
+  </tr>
+
+  @<<messages>>@
+
+
+  <tr><td colspan="9" align="center" class="sp">
+  @<<sumpagess>>@
+  </td></tr>
+  </table>
+
+ </td></tr>
+ </table>
+  </form>
+</td>
